@@ -8,7 +8,7 @@ fn main() {
     vm.interpret_file("examples/scripts/test.wren").unwrap();
 
     vm.get_variable("main", "Test", 0);
-    let class_handle = vm.get_slot_handle(0).unwrap();
+    let class_handle = vm.get_slot_handle(0);
 
     let zero = vm.make_call_handle("zero()");
     let one = vm.make_call_handle("one(_)");
